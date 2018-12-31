@@ -12,7 +12,8 @@ from lxml import etree
 
 
 class Weibo:
-    cookie = {"Cookie": "your cookie"}  # 将your cookie替换成自己的cookie
+    my_cookie = ''
+    cookie = {"Cookie": my_cookie}  # 将your cookie替换成自己的cookie
 
     # Weibo类初始化
     def __init__(self, user_id, filter=0):
