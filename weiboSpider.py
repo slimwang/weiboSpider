@@ -12,9 +12,6 @@ from lxml import etree
 
 
 class Weibo:
-    my_cookie = ''
-    cookie = {"Cookie": my_cookie}  # 将your cookie替换成自己的cookie
-
     # Weibo类初始化
     def __init__(self, user_id, filter=0):
         self.user_id = user_id  # 用户id，即需要我们输入的数字，如昵称为“Dear-迪丽热巴”的id为1669879400
@@ -31,6 +28,9 @@ class Weibo:
         self.retweet_num = []  # 微博对应的转发数
         self.comment_num = []  # 微博对应的评论数
         self.publish_tool = []  # 微博发布工具
+
+    def set_cookie(self, cookie):
+        self.cookie = {"Cookie": cookie}
 
     # 获取用户昵称
     def get_username(self):
